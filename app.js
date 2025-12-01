@@ -89,11 +89,7 @@ const comments = [
 ];
 
 // Ex1
-let veryOldInventors = inventors.filter((i) => {
-  if (i.year > 1500 && i.year < 1599) {
-    return i;
-  }
-});
+let veryOldInventors = inventors.filter((i) => i.year > 1500 && i.year < 1599);
 console.log("Ex1:", veryOldInventors);
 
 // Ex2
@@ -106,44 +102,33 @@ let inventorNames = inventors.map((i) => {
 console.log("Ex2", inventorNames);
 
 // Ex3
-let sortedByBirthYear = inventors.sort((a, b) => {
-  return a.year - b.year
-})
-console.log("Ex3", sortedByBirthYear)
+let sortedByBirthYear = inventors.sort((a, b) => a.year - b.year);
+console.log("Ex3", sortedByBirthYear);
 
 // Ex4
-let inventorNamedAda = inventors.find((i) => {
-  return i.first === "Ada"
-})
-console.log("Ex4", inventorNamedAda)
+let inventorNamedAda = inventors.find((i) => i.first === "Ada");
+console.log("Ex4", inventorNamedAda);
 
 // Ex5
-let firstLast = people.map((p) => {
-  let name = p.split(", ")
-  return name[1] + " " + name[0]
-})
-console.log("Ex5",firstLast)
+let firstLast = people.map((p) => `${p.split(", ")[1]} ${p.split(", ")[0]}`);
+console.log("Ex5", firstLast);
 
 // Ex6
-let isAdultPresent = devs.some((d) => {
-  return new Date().getFullYear() - d.year >= 18
-})
-console.log("Ex6", isAdultPresent)
+let isAdultPresent = devs.some(
+  (dev) => new Date().getFullYear() - dev.year >= 18
+);
+console.log("Ex6", isAdultPresent);
 
 // Ex7
-let isEveryone19OrOlder = devs.every((d) => {
-  return new Date().getFullYear() - d.year >= 19
-})
-console.log("Ex7", isEveryone19OrOlder)
+let isEveryone19OrOlder = devs.every(
+  (dev) => new Date().getFullYear() - dev.year >= 19
+);
+console.log("Ex7", isEveryone19OrOlder);
 
 // Ex8
-let commentById = comments.find((comment) => {
-  if (comment.id === 823423) {
-    return comment
-  }
-})
-console.log("Ex8", commentById)
+let commentById = comments.find((comment) => comment.id === 823423);
+console.log("Ex8", commentById);
 
 // Ex9
-let idx = comments.findIndex((comment) => comment.id === 123523); 
+let idx = comments.findIndex((comment) => comment.id === 123523);
 console.log("Ex9", idx);
