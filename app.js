@@ -93,12 +93,7 @@ let veryOldInventors = inventors.filter((i) => i.year > 1500 && i.year < 1599);
 console.log("Ex1:", veryOldInventors);
 
 // Ex2
-let inventorNames = inventors.map((i) => {
-  return {
-    first: i.first,
-    last: i.last,
-  };
-});
+let inventorNames = inventors.map((i) => ({ first: i.first, last: i.last }));
 console.log("Ex2", inventorNames);
 
 // Ex3
