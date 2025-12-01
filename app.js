@@ -127,3 +127,14 @@ console.log("Ex8", commentById);
 // Ex9
 let idx = comments.findIndex((comment) => comment.id === 123523);
 console.log("Ex9", idx);
+
+// LEVEL UP .........................
+
+// Ex1
+let totalYearsLived = inventors.reduce(
+  (accumulator, current) => accumulator + (current.passed - current.year),
+  0
+);
+console.log("Level Up - Ex1", totalYearsLived);
+
+
